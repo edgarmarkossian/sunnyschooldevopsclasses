@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edgar-nginx-deployment
+spec:  #deployment's specification
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata: 
+      labels: 
+        app: nginx
+    spec: #pod's specification
+      containers: 
+      - name: nginx
+        image: nginx:latest
+        ports: 
+        - containerPort: 80
+      # - name: another-nginx           in case of multicontainer
+      #   image: nginx:1.29.0
+      #   ports: 
+      #   - containerPort: 8080
