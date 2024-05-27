@@ -22,6 +22,9 @@ spec:
               mountPath: /var/www/html
             - name: nginx-config
               mountPath: /etc/nginx/conf.d
+          env:
+            - name: PHP_FPM_SERVICE_HOST
+              value: "localhost" # Communicate with PHP-FPM using localhost
 
         - name: php-fpm
           image: wordpress:php7.4-fpm
