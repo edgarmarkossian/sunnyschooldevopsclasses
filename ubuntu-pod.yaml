@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mypod
+  name: ubuntu-pod
 spec:
   containers:
-    - name: myfrontend
-      image: nginx
+    - name: ubuntu-container
+      image: ubuntu:latest
+      command: ["/bin/bash", "-c", "while true; do echo hello; sleep 10;done"]
       volumeMounts:
       - mountPath: "/var/www/html"
         name: mypd

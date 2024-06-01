@@ -3,9 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-pvc
 spec:
-  selector: #--if needed (more then 1 pv)
-    matchLabels:
-      type: local-1
   storageClassName: manual
   accessModes:
     - ReadWriteMany
