@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-deployment
+  #namespace: edgar
+spec:  #deployment's specification
+  replicas: 1
+  selector:
+    matchLabels:
+      app: v2
+  template:
+    metadata: 
+      labels: 
+        app: v2
+    spec: #pod's specification
+      containers: 
+      - name: ubuntu
+        image: ubuntu:22.04
+        command: ["/bin/bash" , "-c", "tail -f"]
+        args: [" /dev/null"]
