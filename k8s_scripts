@@ -160,7 +160,9 @@ Readiness/Liveness
 	-> kubectl get pods --selector app=v1
 
 
-
+Persistent volume(claim)
+41.update the reclaim policy of a Persistent Volume (PV)
+	-> kubectl patch pv [pv_name] -p '{"spec":{"persistentVolumeReclaimPolicy":"Recycle"}}'
 
 
 
