@@ -164,8 +164,10 @@ Persistent volume(claim)
 41.update the reclaim policy of a Persistent Volume (PV)
 	-> kubectl patch pv [pv_name] -p '{"spec":{"persistentVolumeReclaimPolicy":"Recycle"}}'
 
-
-
-
-
-
+42.Set up NGINX with sample traffic on Amazon EKS and Kubernetes
+	https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-Prometheus-Sample-Workloads-nginx.html
+	
+43. Check pod create/delete access for user
+	-> kubectl auth can-i create pod
+	-> kubectl auth can-i delete pod
+	-> kubectl auth can-i create pods --as dev-user

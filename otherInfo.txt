@@ -1,0 +1,5 @@
+01/06/2024
+Network Policies, Ingress/Egress
+
+apache -> 40:14 
+np.yaml -> 1:01:01
